@@ -23,6 +23,7 @@
             <a href="reservation.html" class="btn btn-reserve">Réserver</a>
         </div>
     </header>
+
     <main>
         <section class="hero">
             <div class="container">
@@ -31,28 +32,21 @@
             </div>
         </section>
 
-        <section class="reservation container">
-            <form action="#" method="post">
-                <label for="nom">Nom :</label>
-                <input type="text" id="nom" name="nom" placeholder="Votre nom">
-                
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" placeholder="Votre email">
-                
-                <label for="telephone">Téléphone :</label>
-                <input type="tel" id="telephone" name="telephone" placeholder="Votre téléphone">
-                
-                <label for="date">Date :</label>
-                <input type="date" id="date" name="date">
-                
-                <label for="heure">Heure :</label>
-                <input type="time" id="heure" name="heure">
-                
-                <label for="personnes">Nombre de personnes :</label>
-                <input type="number" id="personnes" name="personnes" min="1" max="20">
-                
-                <button type="submit" class="btn">Envoyer</button>
-            </form>
+
+        <!-- Intégration Weeatt -->
+        <section class="reservation-integration container" style="margin-top: 40px; text-align: center;">
+            <span class="glf-button" 
+                  data-glf-cuid="62a5857a-fbb2-4150-a90d-2a0f7d1e1fc8" 
+                  data-glf-ruid="692ace75-4e7b-44a8-9f44-40534c624f02">
+                Voir Menu & Commander
+            </span>
+
+            <span class="glf-button reservation" 
+                  data-glf-cuid="62a5857a-fbb2-4150-a90d-2a0f7d1e1fc8" 
+                  data-glf-ruid="692ace75-4e7b-44a8-9f44-40534c624f02"
+                  data-glf-reservation="true">
+                Réserver une Table
+            </span>
         </section>
     </main>
 
@@ -66,6 +60,8 @@
         </div>
     </footer>
 
+    <!-- Script Weeatt -->
+    <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
     <script src="/js/script.js"></script>
 </body>
 </html>

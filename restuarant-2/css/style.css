@@ -1,0 +1,276 @@
+/* Style général */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #fefefe;
+    color: #333;
+    overflow-x: hidden;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header et navigation */
+header {
+    background: #222;
+    color: #fff;
+}
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+nav {
+    position: relative;
+}
+nav ul.main-menu {
+    list-style: none;
+    display: flex;
+}
+nav ul.main-menu li {
+    margin-left: 20px;
+}
+nav ul.main-menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 0;
+}
+nav ul.main-menu li a:hover,
+nav ul.main-menu li a.active {
+    border-bottom: 2px solid #e74c3c;
+}
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+}
+.btn-reserve {
+    background: #e74c3c;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+button.btn {
+    background: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.img-livraison {
+    width: 400px;
+    margin: 0 auto;
+    display: block;
+}
+/* Hero */
+.hero {
+    background: #e74c3c url("../images/hero-bg.jpg") no-repeat center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.hero .hero-buttons .btn {
+    display: inline-block;
+    background: #fff;
+    color: #e74c3c;
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    border-radius: 30px;
+}
+.hero .hero-buttons .btn:hover {
+    background: #e74c3c;
+    color: #fff;
+}
+
+/* Sections */
+section {
+    padding: 50px 0;
+}
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #e74c3c;
+}
+section p {
+    margin-bottom: 15px;
+}
+.cuisine-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.cuisine-item {
+    flex: 1 1 45%;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+/* Optionnel: Ajouter un peu de style aux images */
+.cuisine-item img {
+    width: 100%; /* Assurez-vous que l'image prend toute la largeur de son conteneur */
+    height: auto; /* Maintenir le ratio de l'image */
+}
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.partners-logos img {
+    height: 150px;
+}
+
+/* Listes du menu */
+.menu ul {
+    list-style: disc inside;
+}
+.menu ul li {
+    margin-bottom: 8px;
+}
+
+/* Galerie */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.gallery img {
+    flex: 1 1 30%;
+    width: calc(33% - 10px);
+    border-radius: 4px;
+}
+
+/* Boxes */
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.box-item {
+    flex: 1 1 30%;
+    text-align: center;
+}
+.box-item img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* Formulaires (Contact, Réservation) */
+form {
+    display: grid;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+form label {
+    font-weight: bold;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+form button.btn {
+    background: #e74c3c;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+form button.btn:hover {
+    background: #c0392b;
+    border-radius: 30px;
+}
+
+/* Footer */
+footer {
+    width: 100%;               
+    background: #222;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+footer a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .container {
+    width: 100%;       
+    max-width: none;          
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Responsive (mobile) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    nav ul.main-menu {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 200px;
+    }
+    nav ul.main-menu.active {
+        display: flex;
+    }
+    nav ul.main-menu li {
+        margin: 10px 0;
+        text-align: right;
+        margin-right: 20px;
+    }
+    .cuisine-section {
+        flex-direction: column;
+    }
+    .gallery img {
+        flex: 1 1 100%;
+    }
+}
+
+.hero {
+    background-image: url("../images/img.jpg");
+    background-size: cover;       /* L'image couvre toute la section */
+    background-position: center;  /* Centrée */
+    background-repeat: no-repeat; /* Pas de répétition */
+  }
+  
